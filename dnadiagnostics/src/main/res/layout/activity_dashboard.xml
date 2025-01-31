@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/LL_ButtonsTab">
+        <Button
+            android:id="@+id/buttonPopularTest_id"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:text="Dashboard"
+            android:onClick="selectFrag"
+            android:layout_weight="1"
+            android:textSize="12sp"
+            android:padding="1sp"
+            android:background="#ff9c33"
+            android:textColor="#ffffff"
+            />
+
+        <Button
+            android:id="@+id/buttonUploadPrescription_id"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:onClick="selectFrag"
+            android:text="Test Status"
+            android:layout_weight="1"
+            android:textSize="12sp"
+            android:padding="1sp"
+            android:background="#ff9c33"
+            android:textColor="#ffffff"/>
+
+        <Button
+            android:id="@+id/buttonSelectTest_id"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:onClick="selectFrag"
+            android:text="TAT Summary"
+            android:layout_weight="1"
+            android:textSize="12sp"
+            android:padding="1sp"
+            android:background="#ff9c33"
+            android:textColor="#ffffff"
+            />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lab Dashboard :"
+        android:id="@+id/TVLabDashboard_id"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:textColor="#660022"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@+id/LL_ButtonsTab"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
+
+        />
+
+    <LinearLayout
+        android:id="@+id/ll3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:weightSum="10"
+        android:layout_below="@+id/TVLabDashboard_id"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        >
+
+
+        <LinearLayout
+            android:id="@+id/lldfeq3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="0dp"
+            android:layout_weight="9">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="0.3"
+                android:text="FROM"
+                android:textStyle="bold|italic"
+                android:textSize="15sp"
+                android:textColor="#000000"
+                android:layout_marginLeft="2sp"
+                android:layout_marginRight="2sp"
+
+                />
+
+            <EditText
+                android:layout_height="40dp"
+                android:layout_width="0dp"
+                android:id="@+id/etFromDate"
+                android:layout_weight="0.5"
+                android:editable="false"
+                android:clickable="false"
+                android:focusable="false"
+                android:textSize="13sp"
+                android:textColorHint="#848484"
+                android:hint="FromDate"
+                android:singleLine = "true"
+                android:maxLines="1" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="0.2"
+                android:text="TO"
+                android:textStyle="bold|italic"
+                android:textSize="15sp"
+                android:textColor="#000000"
+                android:layout_marginLeft="2sp"
+                android:layout_marginRight="2sp"
+                android:singleLine = "true"
+
+                />
+
+            <EditText
+                android:layout_height="40dp"
+                android:layout_width="0dp"
+                android:id="@+id/etToDate"
+                android:editable="false"
+                android:layout_weight="0.5"
+                android:clickable="false"
+                android:focusable="false"
+                android:textSize="13sp"
+                android:textColorHint="#848484"
+                android:hint="ToDate"
+                android:singleLine = "true"
+                android:maxLines="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/btnSearch"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:background="@drawable/search" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:id="@+id/rl2"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/ll_btnother2"
+            android:layout_below="@+id/ll3"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginTop="0dp">
+
+
+<!-- *************************  LL_Dashboadr ********************* -->
+
+            <LinearLayout
+                android:id="@+id/LL_PopularTest_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="5dp"
+                    android:background="#ffffff">
+
+
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="fill_parent"
+                        android:orientation="vertical"
+                        android:id="@+id/mainLL"
+                        >
+
+
+
+                        <LinearLayout
+                            android:id="@+id/imagrfgseeView1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center_horizontal"
+                            android:layout_marginTop="0dp"
+                            android:layout_gravity="bottom"
+                            android:layout_below="@+id/imgslid"
+                            android:layout_centerHorizontal="true"
+                            >
+
+                            <TableLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:shrinkColumns="*"
+                                android:stretchColumns="*"
+                                android:paddingLeft="0dp"
+                                android:paddingRight="0dp"
+                                >
+
+                                <TableRow
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent"
+                                    android:gravity="center_horizontal"
+                                    android:weightSum="2"
+                                    android:padding="0dp">
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/mri_ll"
+                                        android:orientation="vertical"
+                                        android:gravity="center"
+                                        android:padding="2dp"
+                                        android:layout_margin="5dp"
+                                        android:background="#4db8ff"
+                                        android:layout_weight="1">
+
+                                        <TextView
+
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:background="#00ffffff"
+                                            android:text="Registrations"
+                                            android:textStyle="bold"
+                                            android:textColor="#ffffff"
+                                            android:padding="0dp"
+                                            android:layout_marginTop="10dp"
+                                            android:gravity="center_horizontal"/>
+                                        <RelativeLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:layout_gravity="center">
+                                            <ProgressBar
+                                                android:id="@+id/myProgressRegis_id"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content" />
+
+                                            <TextView
+                                                android:id="@+id/TVRegistration_id"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="0dp"
+                                                android:layout_marginBottom="10dp"
+                                                android:background="#00ffffff"
+                                                android:gravity="center_horizontal"
+                                                android:padding="0dp"
+                                                android:text="0"
+                                                android:textColor="#000000"
+                                                android:textSize="25dp"
+                                                android:textStyle="bold" />
+                                        </RelativeLayout>
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        android:id="@+id/ctscan_ll"
+                                        android:layout_weight="1"
+                                        android:gravity="center"
+                                        android:background="#ffcc00"
+                                        android:padding="2dp"
+                                        android:layout_margin="5dp">
+                                        <TextView
+
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:background="#00ffffff"
+                                            android:text="Pending Tests"
+                                            android:textStyle="bold"
+                                            android:textColor="#ffffff"
+                                            android:padding="0dp"
+                                            android:layout_marginTop="10dp"
+                                            android:gravity="center_horizontal"/>
+                                        <RelativeLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:layout_gravity="center">
+
+                                            <ProgressBar
+                                                android:id="@+id/myProgressTotalAmount_id"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content" />
+
+                                            <TextView
+                                                android:id="@+id/TVPenditTest_id"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="0dp"
+                                                android:layout_marginBottom="10dp"
+                                                android:background="#00ffffff"
+                                                android:gravity="center_horizontal"
+                                                android:padding="0dp"
+                                                android:text="0"
+                                                android:textColor="#000000"
+                                                android:textSize="25dp"
+                                                android:textStyle="bold" />
+
+                                        </RelativeLayout>
+                                    </LinearLayout>
+
+                                </TableRow>
+
+
+                                <TableRow
+                                    android:id="@+id/tablejklRow1"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent"
+                                    android:weightSum="2"
+                                    android:layout_marginTop="5dp">
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        android:id="@+id/sonography_ll"
+                                        android:padding="2dp"
+
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_marginRight="5dp"
+                                        android:background="#00cc44"
+                                        android:gravity="center_horizontal"
+                                        android:layout_weight="1">
+                                        <TextView
+
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:background="#00ffffff"
+                                            android:text="Total Amount"
+                                            android:textStyle="bold"
+                                            android:textColor="#ffffff"
+                                            android:padding="0dp"
+                                            android:layout_marginTop="10dp"
+                                            android:gravity="center_horizontal"/>
+                                        <RelativeLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:layout_gravity="center">
+                                            <ProgressBar
+                                                android:id="@+id/myProgressBlnc_id"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content" />
+                                            <TextView
+                                                android:id="@+id/TVTotalAmount_id"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:background="#00ffffff"
+                                                android:text="0"
+                                                android:textStyle="bold"
+                                                android:textColor="#000000"
+                                                android:layout_marginTop="0dp"
+                                                android:layout_marginBottom="10dp"
+                                                android:padding="0dp"
+                                                android:textSize="25dp"
+                                                android:gravity="center_horizontal"/>
+
+                                        </RelativeLayout>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        android:id="@+id/pathology_ll"
+                                        android:layout_weight="1"
+                                        android:gravity="center"
+                                        android:background="#ff6666"
+                                        android:padding="2dp"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_marginRight="5dp">
+                                        <TextView
+
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:background="#00ffffff"
+                                            android:text="Balance Amount"
+                                            android:textStyle="bold"
+                                            android:textColor="#ffffff"
+                                            android:padding="0dp"
+                                            android:layout_marginTop="10dp"
+                                            android:gravity="center_horizontal"/>
+                                        <RelativeLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:layout_gravity="center">
+                                            <ProgressBar
+                                                android:id="@+id/myProgressPendinTest_id"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content" />
+                                            <TextView
+                                                android:id="@+id/TVBalnceAmount_id"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:background="#00ffffff"
+                                                android:text="0"
+                                                android:textStyle="bold"
+                                                android:textColor="#000000"
+                                                android:layout_marginBottom="10dp"
+                                                android:layout_marginTop="0dp"
+                                                android:padding="0dp"
+                                                android:textSize="25dp"
+                                                android:gravity="center_horizontal"/>
+
+                                        </RelativeLayout>
+
+                                    </LinearLayout>
+                                </TableRow>
+
+                            </TableLayout>
+
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Collection Center wise Summary :"
+                            android:id="@+id/TVCCLabDashboard_id"
+                            android:textStyle="bold"
+                            android:textSize="16dp"
+                            android:textColor="#660022"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:layout_marginTop="10dp"
+
+                            />
+                    </LinearLayout>
+
+
+
+
+
+                            <ExpandableListView
+                                android:id="@+id/coolectioncenterlistview"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="0dp"
+                                android:background="#ffffff"
+                                android:divider="#ffffff"
+                                android:dividerHeight="10dp"
+                                android:layout_below="@+id/mainLL"
+                                />
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+<!-- *************************  LL_test level status ********************* -->
+
+            <LinearLayout
+                android:id="@+id/LL_UploadPrescription_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_marginBottom="20dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center">
+                <ProgressBar
+                    android:id="@+id/mypiaGraph_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="130dp"/>
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/chart1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp" />
+            </RelativeLayout>
+
+            </LinearLayout>
+
+ <!-- *************************  LL_TAT summary ********************* -->
+
+            <LinearLayout
+                android:id="@+id/LL_SelectTest_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible"
+                android:layout_marginBottom="20dp">
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center">
+                <ProgressBar
+                    android:id="@+id/myBarGraph_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="130dp"/>
+
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/Linechart_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <!-- *************************  LL_end********************* -->
+
+        </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/ll_btnother2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginBottom="0dp">
+
+        <Button
+            android:id="@+id/RegisterPatiebtBtn_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="0.8"
+            android:background="#0054A6"
+            android:text="Register Patient"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:typeface="normal"
+            android:visibility="gone"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

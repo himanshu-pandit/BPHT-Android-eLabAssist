@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "430566464676",
+    "firebase_url": "https://elabassist-39592.firebaseio.com",
+    "project_id": "elabassist-39592",
+    "storage_bucket": "elabassist-39592.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:430566464676:android:3f76f1553545ec23",
+        "android_client_info": {
+          "package_name": "com.bluepearl.dnadiagnostics"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "430566464676-37h246c5dns5h5qvbnldpp8e2vbgn6ka.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_6MDrJUjI7X-AEp3EJNdV51PaaiLkyok"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

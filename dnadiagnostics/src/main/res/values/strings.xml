@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">eLAB Assist</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_search">Search</string>
+    <string name="otp_string">Sorry we failed to verify your number automatically.Please enter the OTP below.</string>
+    <string name="rb_other">Other</string>
+    <string name="rb_current">Current</string>
+    <string name="rb_residence">Residence</string>
+    <string name="rb_office">Office</string>
+    <string name="rb_lab">Visiting Lab</string>
+    <string name="rb_home">Home Collection</string>
+    <string name="proceed">More...</string>
+    <string name="ent_add">Enter address</string>
+    <string name="ent_pin">Enter Pincode*</string>
+    <string name="textTabTitle1">Enter Test</string>
+    <string name="textTabTitle2">Upload Prescription</string>
+    <string name="textTabTitle3">Select Test</string>
+    <string name="sample_collection">Test Sample Collection Address</string>
+    <string name="Rs">\u20B9</string>
+    <string name="Popular">Popular Test</string>
+    <string name="Upload">Upload Prescription</string>
+    <string name="Select">Select Test</string>
+    <string name="strSelect"><u>Select</u></string>
+    <string name="strReports"><u>Reports</u></string>
+    <string name="strDashboard"><u>Dashboard</u></string>
+    <string name="strApprove"><u>Approve</u></string>
+    <string name="billreceipt">Bill Receipt</string>
+    <string name="strMore"><u>More</u></string>
+    <string name="strLocation"><u>SEE LOCATION</u></string>
+    <string name="strcall"><u>9890111696</u></string>
+    <string name="strlogout"><u>Logout</u></string>
+
+    <string name="strRecentlyVisitedLaboratory"><u>Recently Visited Laboratory :</u></string>
+    <string name="strRegisteredLaboratory"><u>Registered Laboratory :</u></string>
+
+    <string name="Rss">₹</string>
+
+    <string-array name="order_options_menu">
+        <item>Book Appointment</item>
+        <item>Change Lab</item>
+        <item>Appointment History</item>
+        <item>View Test Report</item>
+        <item>Trackers</item>
+        <item>User Profile</item>
+        <item>Change Password</item>
+        <item>Feedback</item>
+        <item>Log Out</item>
+    </string-array>
+
+    <string-array name="order_options_menu_dl">
+        <item>Change Lab</item>
+        <item>Book Test</item>
+        <item>View Test Report</item>
+        <item>Messaging</item>
+        <item>User Profile</item>
+        <item>Change Password</item>
+        <item>Feedback</item>
+        <item>Log Out</item>
+    </string-array>
+
+    <string-array name="order_options_menu_labuser">
+        <item>Change Lab</item>
+        <item>Collection</item>
+        <item>Change Password</item>
+        <item>Feedback</item>
+        <item>Log Out</item>
+    </string-array>
+
+
+    <string-array name="order_options_menu_admin">
+        <item>Dashboard</item>
+        <item>Change Lab</item>
+        <item>Book Test</item>
+        <item>View Test Report</item>
+        <item>Messaging</item>
+        <item>User Profile</item>
+        <item>Change Password</item>
+        <item>Feedback</item>
+        <item>Log Out</item>
+    </string-array>
+
+
+    <string name="drawer_open">Open Drawer</string>
+    <string name="drawer_close">Close Drawer</string>
+    <string name="gohome">Home</string>
+    <string name="Manual_OTPText">Sorry we fail to detect number automatically </string>
+    <string name="Manual_OTPText2">(Enter the OTP below in case)</string>
+    <string name="btnSubmit">SUBMIT</string>
+    <string name="EnterOtp">Enter OTP Here</string>
+    <string name="Manual_Resend">Resend OTP</string>
+    <string name="title_activity_register_patient">RegisterPatient</string>
+    <string name="title_activity_selet_test__register_patient">SeletTest_RegisterPatient</string>
+
+</resources>

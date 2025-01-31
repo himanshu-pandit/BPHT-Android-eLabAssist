@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="tab_color">#8bceeb</color>
+    <color name="WITHE">#ffffff</color>
+
+    <color name="colorPrimary">#4376bf</color>
+    <color name="colorPrimaryDark">#4376bf</color>
+    <color name="colorAccent">#FFFFFF</color>
+
+    <color name="btnTextcolor">#ffffff</color>
+
+    <color name="ColorName">#4376bf</color>
+
+
+
+    <color name="colorGray">#495C67</color>
+    <color name="colorOrange">#F68159</color>
+    <color name="colorLightGray">#a6abae</color>
+    <color name="colorBackroundWhite">#f0f2ea</color>
+
+</resources>

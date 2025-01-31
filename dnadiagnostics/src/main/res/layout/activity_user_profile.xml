@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout 
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content">
+    
+    <RelativeLayout 
+        android:id="@+id/rl1"
+     	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+   		android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+    
+    <EditText
+           android:id="@+id/name" 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="Name"
+            android:inputType="text"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" 
+            android:maxEms="4"
+            android:singleLine = "true"
+			android:maxLines="1" />
+
+        <EditText
+            android:id="@+id/dateofbirth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:hint="Date of Birth"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:maxEms="4"
+            android:singleLine = "true"
+			android:maxLines="1" 
+			android:layout_marginTop="20dp"
+			android:layout_below="@+id/name" 
+			android:editable="false"
+          	android:focusable="false"/>
+        
+        <TextView android:id="@+id/txtGender"
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:text="Gender :"
+        	android:layout_marginTop="20dp"
+        	android:textSize="18sp"
+        	android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+        	android:layout_below="@+id/dateofbirth"/>
+        
+        <RadioGroup android:id="@+id/radioGender"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:orientation="horizontal"
+        	android:layout_below="@+id/txtGender" 
+        	android:layout_marginTop="10dp"
+        	android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+        	
+    	    <RadioButton android:id="@+id/radioMale"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:text="Male"
+            	android:buttonTint="#000000"
+            	android:checked="true"/>
+    	    
+ 
+        	<RadioButton android:id="@+id/radioFemale"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:buttonTint="#000000"
+            	android:text="Female" />
+ 
+    	</RadioGroup>
+    	
+         
+    	
+        <TextView android:id="@+id/txtlablabel"
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:text="Select Preferred Lab :"
+        	android:layout_marginTop="20dp"
+        	android:textSize="18sp"
+        	android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+        	android:layout_below="@+id/radioGender"
+			android:visibility="gone"/>
+        
+       <LinearLayout android:id="@+id/ll_pname" 
+      		  		  android:layout_height="wrap_content" 
+      		  		  android:layout_width="match_parent" 
+      		  		  android:orientation="horizontal"
+      		  		  android:layout_marginTop="10dp"
+      		  		  android:layout_below="@+id/txtlablabel"
+		   android:visibility="gone">
+        
+        <EditText android:id="@+id/txtlab"
+        	android:layout_width="0dp" 
+    	  	android:layout_weight="1"
+        	android:layout_height="wrap_content"
+        	android:layout_marginTop="20dp"
+        	android:textSize="15sp"
+        	android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:editable="false"
+            android:focusable="false"
+        	android:layout_below="@+id/txtlablabel"/>
+        
+        <ImageButton 
+	    android:id="@+id/clear"
+   		android:layout_height="wrap_content" 
+    	android:layout_width="wrap_content"
+    	android:layout_marginTop="20dp"
+    	android:background="@drawable/cross"/> 
+    	</LinearLayout>
+        
+			</RelativeLayout>
+			
+    <LinearLayout
+        android:id="@+id/InnerLinearLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/rl1"
+        android:layout_gravity="bottom"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentBottom="true" >
+         
+			<Button
+            android:id="@+id/SubmitButton" 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Submit"
+           	android:background="#0054A6"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_gravity="bottom"/>
+			
+			</LinearLayout>
+         
+</RelativeLayout>
+

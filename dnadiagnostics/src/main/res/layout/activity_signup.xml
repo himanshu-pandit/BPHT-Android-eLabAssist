@@ -1,0 +1,251 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <LinearLayout 
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#0054A6">
+        
+        <TextView
+            android:id="@+id/txtviewlab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:textColor="#ffffff"
+            android:text="eLAB Assist"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+        />
+        </LinearLayout>
+        
+    <ScrollView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll"
+        android:layout_above="@+id/SubmitButton">
+
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:paddingLeft="10dp"
+			android:paddingRight="10dp"
+			android:orientation="vertical"
+			android:layout_marginTop="5dp">
+
+			<com.google.android.material.textfield.TextInputLayout
+				android:id="@+id/input_layout_Pasthgdyts"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="0dp"
+				>
+
+				<EditText
+					android:id="@+id/name"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="15dp"
+					android:hint="Name"
+					android:inputType="text"
+					android:paddingLeft="10dp"
+					android:paddingRight="10dp"
+					android:maxEms="4"
+					android:textSize="15dp"
+					android:singleLine = "true"
+					android:maxLines="1"
+					android:layout_below="@+id/etconfirmpassword"/>
+
+			</com.google.android.material.textfield.TextInputLayout>
+
+
+			<com.google.android.material.textfield.TextInputLayout
+				android:id="@+id/input_layout_Pass"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="0dp">
+
+				<EditText
+					android:id="@+id/etmobile"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:hint="Mobile Number*"
+					android:layout_marginTop="20dp"
+					android:inputType="number"
+					android:maxEms="4"
+					android:maxLength="10"
+					android:textSize="15dp"
+					android:maxLines="1"
+					android:paddingLeft="10dp"
+					android:singleLine="true"/>
+
+			</com.google.android.material.textfield.TextInputLayout>
+
+			<com.google.android.material.textfield.TextInputLayout
+				android:id="@+id/input_layout_Pashgjs"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="0dp"
+				app:passwordToggleEnabled="true">
+
+				<EditText
+					android:id="@+id/etpassword"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="15dp"
+					android:hint="Password*"
+					android:inputType="textPassword"
+					android:maxEms="4"
+					android:maxLines="1"
+					android:paddingLeft="10dp"
+					android:paddingRight="10dp"
+					android:singleLine="true"
+					android:textSize="15dp"
+					android:layout_below="@+id/etmobile"/>
+
+			</com.google.android.material.textfield.TextInputLayout>
+
+			<com.google.android.material.textfield.TextInputLayout
+				android:id="@+id/input_layout_Passsgr"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="0dp"
+				app:passwordToggleEnabled="true">
+				<EditText
+					android:id="@+id/etconfirmpassword"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="15dp"
+					android:hint="Confirm Password*"
+					android:inputType="textPassword"
+					android:maxEms="4"
+					android:maxLines="1"
+					android:paddingLeft="10dp"
+					android:paddingRight="10dp"
+					android:singleLine="true"
+					android:textSize="15dp"
+					android:layout_below="@+id/etpassword" />
+
+			</com.google.android.material.textfield.TextInputLayout>
+
+
+			<com.google.android.material.textfield.TextInputLayout
+				android:id="@+id/input_layout_Pyetdyhass"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="0dp">
+
+				<EditText
+					android:id="@+id/dateofbirth"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:hint="Date of Birth"
+					android:paddingLeft="10dp"
+					android:paddingRight="10dp"
+					android:maxEms="4"
+					android:singleLine = "true"
+					android:maxLines="1"
+					android:textSize="15dp"
+					android:layout_marginTop="15dp"
+					android:editable="false"
+					android:focusable="false"
+					android:layout_below="@+id/name"/>
+			</com.google.android.material.textfield.TextInputLayout>
+
+			<TextView android:id="@+id/txtGender"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="Gender :"
+				android:layout_marginTop="15dp"
+				android:paddingLeft="10dp"
+				android:textSize="15dp"
+				android:paddingRight="10dp"
+				android:layout_below="@+id/dateofbirth"/>
+
+			<RadioGroup android:id="@+id/radioGender"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:layout_below="@+id/txtGender"
+				android:layout_marginTop="10dp"
+				android:paddingLeft="10dp"
+				android:paddingRight="10dp">
+
+				<RadioButton android:id="@+id/radioMale"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Male"
+					android:checked="true"
+					android:textSize="10dp"
+					android:buttonTint="#000000"/>
+
+
+				<RadioButton android:id="@+id/radioFemale"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Female"
+					android:textSize="10dp"
+					android:buttonTint="#000000" />
+
+
+
+			</RadioGroup>
+
+			<com.google.android.material.textfield.TextInputLayout
+				android:id="@+id/input_layout_Pertyeyass"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="0dp">
+
+				<EditText
+					android:id="@+id/etEmailId"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="15dp"
+					android:hint="Email Id"
+					android:inputType="textEmailAddress"
+					android:maxEms="4"
+					android:maxLines="1"
+					android:paddingLeft="10dp"
+					android:paddingRight="10dp"
+					android:singleLine="true"
+					android:layout_below="@+id/radioGender"/>
+			</com.google.android.material.textfield.TextInputLayout>
+
+			<TextView
+				android:id="@+id/textView"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="15dp"
+				android:paddingLeft="10dp"
+				android:paddingRight="10dp"
+				android:textSize="13sp"
+				android:layout_below="@+id/etEmailId"
+				android:layout_marginBottom="10dp"/>
+
+		</LinearLayout>
+    </ScrollView>
+
+	<Button
+		android:id="@+id/SubmitButton"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:layout_marginLeft="10dp"
+		android:layout_marginTop="10dp"
+		android:layout_marginRight="10dp"
+		android:layout_marginBottom="10dp"
+		android:background="@drawable/textviewstylelab"
+		android:paddingLeft="10dp"
+		android:paddingRight="10dp"
+		android:text="Register"
+		android:textColor="#0054A6"
+		android:textStyle="bold"
+		android:typeface="normal" />
+
+</RelativeLayout>

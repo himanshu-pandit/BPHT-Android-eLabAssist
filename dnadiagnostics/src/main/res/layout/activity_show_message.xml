@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_registration_flebotomia"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+ >
+
+
+    <ScrollView
+        android:id="@+id/scrollview_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/Rr_bottom"
+        >
+
+        <LinearLayout
+            android:id="@+id/rl2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <!--   <LinearLayout
+                       android:id="@+id/ll_seperator"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_below="@+id/ll"
+                       android:orientation="horizontal" >
+
+                       <ImageButton
+                           android:id="@+id/seperator"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="10dp"
+                           android:background="@drawable/seprator" />
+                   </LinearLayout>  -->
+
+                <LinearLayout
+                    android:id="@+id/ll_pnameF"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_seperator"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Message :"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:layout_marginRight="5dp"
+                        android:textStyle="bold"
+                        android:layout_weight="2"
+                        />
+
+                    <TextView
+                        android:id="@+id/Message_id"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textColor="#000000"
+                        android:textSize="20dp"
+                        android:padding="2dp"
+                        android:layout_weight="3"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_pnameFhg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_seperator"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Message From:"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:layout_marginRight="5dp"
+                        android:textStyle="bold"
+                        android:layout_weight="2"
+                        />
+
+                    <TextView
+                        android:id="@+id/MessageFrom_id"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textColor="#000000"
+                        android:textSize="20dp"
+                        android:padding="2dp"
+                        android:layout_weight="3"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_pnameFhggbfd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_seperator"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:layout_weight="5">
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Message To:"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:layout_marginRight="5dp"
+                        android:textStyle="bold"
+                        android:layout_weight="2"
+                        />
+
+                    <TextView
+                        android:id="@+id/MessageTo_id"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textColor="#000000"
+                        android:textSize="20dp"
+                        android:padding="2dp"
+                        android:layout_weight="3"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_ageF"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_pnameF"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Date :"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:layout_marginRight="5dp"
+                        android:textStyle="bold"
+                        android:layout_weight="2"
+                        />
+
+                    <TextView
+                        android:id="@+id/getCreatedDate_id"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textColor="#000000"
+                        android:layout_weight="3"
+                        android:textSize="20dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_mobilenumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_ageF"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:weightSum="6"
+                    >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Final State :"
+                        android:layout_weight="2"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textStyle="bold"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/MessageState_id"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textColor="#000000"
+                        android:textSize="20dp"/>
+
+                    <Button
+                        android:id="@+id/closeBtn_id"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="2"
+                        android:text="Close"
+                        android:textColor="#ffffff"
+                        android:background="@drawable/buttonstyleblue"
+                        android:textAllCaps="true"
+                        android:visibility="visible"
+
+
+
+                        />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp"
+                    android:weightSum="5"
+                    >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Reply :"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:layout_marginRight="5dp"
+                        android:textStyle="bold"
+                        android:id="@+id/textView8"
+                        android:layout_weight="1.5"
+                        />
+
+                    <TextView
+                        android:id="@+id/eRplyMesg_id"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textColor="#000000"
+                        android:textSize="20dp"
+                        android:layout_weight="3.5"
+                        android:padding="2dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llgh9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="5"
+                    >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Reply By :"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="2"
+                        android:textStyle="bold"
+                        android:id="@+id/texthfView8" />
+
+                    <TextView
+                        android:id="@+id/RplyBy_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textColor="#000000"
+                        android:textSize="20dp"
+                        android:layout_weight="3"
+                        android:padding="2dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/hgll9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="5"
+                    >
+
+                    <TextView
+                        android:id="@+id/texghtView8"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="Reply Date :"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textStyle="bold"
+                        android:layout_weight="2"/>
+
+                    <TextView
+                        android:id="@+id/RpluMsgDate_id"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textColor="#000000"
+                        android:textSize="20dp"
+                        android:layout_weight="3"
+                        android:padding="2dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/hgll9dhhhhg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="5"
+                    >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Closed By :"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:layout_marginRight="5dp"
+                        android:textStyle="bold"
+                        android:id="@+id/texghtViewdd8"
+                        android:layout_weight="2"/>
+
+                    <TextView
+                        android:id="@+id/ClosedBy_id"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textColor="#000000"
+                        android:textSize="20dp"
+                        android:padding="2dp"
+                        android:layout_weight="3"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/Rr_bottom"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:padding="10dp"
+
+        >
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_UserName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="8">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/editTesxtSendRply_id"
+                android:maxLines="4"
+                android:hint="Type Reply"
+
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageButton
+            android:id="@+id/sendRply_img_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:background="#00000000"
+
+            android:src="@drawable/ic_send_black_24d"/>
+    </LinearLayout>
+
+</RelativeLayout>

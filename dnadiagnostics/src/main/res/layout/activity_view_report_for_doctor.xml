@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<LinearLayout
+	android:layout_height="fill_parent"
+	android:layout_width="fill_parent"
+	android:orientation="vertical"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:padding="10dp">
+
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:layout_marginTop="5dp"
+		android:weightSum="10"
+		android:visibility="gone">
+
+		<com.google.android.material.textfield.TextInputLayout
+			android:id="@+id/input_layout_Pafhdffdfss"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_marginTop="0dp"
+			android:layout_weight="8.5">
+
+			<AutoCompleteTextView
+				android:id="@+id/etColectioAffiltion"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_marginTop="0dp"
+				android:layout_weight="8.5"
+				android:completionThreshold="1"
+
+				android:hint="search Affiliation,Collection Center"
+				android:maxLines="1"
+				android:paddingLeft="10dp"
+				android:singleLine="true"
+				android:textColorHint="#848484"
+				android:textSize="15dp">
+
+				<requestFocus />
+			</AutoCompleteTextView>
+
+		</com.google.android.material.textfield.TextInputLayout>
+		<LinearLayout
+			android:id="@+id/llsdfg4"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1.5"
+			android:gravity="center"
+			android:orientation="horizontal"
+			android:padding="1dp"
+			android:visibility="visible">
+
+			<ImageButton
+				android:id="@+id/clearCC"
+				android:layout_width="25dp"
+				android:layout_height="25dp"
+				android:layout_marginTop="0dp"
+				android:padding="2dp"
+				android:background="@drawable/cross" />
+
+			<ImageButton
+				android:id="@+id/btnSearchAdv_id"
+				android:layout_width="35dp"
+				android:layout_height="35dp"
+				android:layout_gravity="bottom"
+				android:background="#00000000"
+				android:visibility="gone"
+				android:src="@drawable/downarrowww" />
+		</LinearLayout>
+
+	</LinearLayout>
+
+
+
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:layout_marginTop="5dp"
+		android:weightSum="10">
+
+		<com.google.android.material.textfield.TextInputLayout
+			android:id="@+id/input_layout_Pagjkgfhdffdfss"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_marginTop="0dp"
+			android:layout_weight="8.5">
+
+			<AutoCompleteTextView
+				android:id="@+id/etPatientName"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_marginTop="0dp"
+				android:layout_weight="8.5"
+				android:completionThreshold="1"
+				android:hint="search Patient Name, or LabCode"
+				android:maxLines="1"
+				android:paddingLeft="10dp"
+				android:singleLine="true"
+				android:textColorHint="#848484"
+				android:textSize="15dp">
+
+				<requestFocus />
+			</AutoCompleteTextView>
+		</com.google.android.material.textfield.TextInputLayout>
+
+		<LinearLayout
+			android:id="@+id/llsdfg42"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1.5"
+			android:gravity="center"
+			android:orientation="horizontal"
+			android:padding="1dp"
+			android:visibility="visible">
+
+			<ImageButton
+				android:id="@+id/clearCC2"
+				android:layout_width="25dp"
+				android:layout_height="25dp"
+				android:layout_marginTop="0dp"
+				android:background="@drawable/cross"
+				android:padding="2dp" />
+
+			<ImageButton
+				android:id="@+id/btnSearchAdv_id2"
+				android:layout_width="35dp"
+				android:layout_height="35dp"
+				android:layout_gravity="bottom"
+				android:background="#00000000"
+				android:visibility="gone"
+				android:src="@drawable/downarrowww" />
+		</LinearLayout>
+
+	</LinearLayout>
+
+
+
+
+
+
+	<LinearLayout
+		android:id="@+id/ll3"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:weightSum="10">
+
+		<LinearLayout
+			android:id="@+id/ll5"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="0dp"
+			android:layout_weight="8.5"
+			android:orientation="vertical" >
+
+
+
+
+			<AutoCompleteTextView
+				android:layout_height="50dp"
+				android:layout_width="match_parent"
+				android:id="@+id/etPatientName2"
+				android:layout_marginTop="5dp"
+				android:paddingLeft="10dp"
+				android:completionThreshold="1"
+				android:textColorHint="#848484"
+				android:hint="search Patient Name, or LabCode"
+				android:textSize="15dp"
+				android:maxLines="1"
+
+				android:singleLine = "true"
+				android:visibility="gone"
+				>
+				<requestFocus/>
+			</AutoCompleteTextView>
+
+			<EditText
+				android:layout_height="50dp"
+				android:layout_width="match_parent"
+				android:id="@+id/etLabCode"
+				android:layout_marginTop="5dp"
+				android:paddingLeft="10dp"
+				android:textColorHint="#848484"
+				android:hint="Lab Code"
+				android:visibility="gone"
+				android:inputType="number"
+				android:singleLine = "true"
+				android:maxLines="1" />
+			<LinearLayout
+				android:id="@+id/lldfeq3"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="0dp"
+				android:orientation="horizontal">
+
+				<TextView
+					android:layout_width="0dp"
+					android:layout_height="40dp"
+					android:layout_marginLeft="2sp"
+					android:layout_marginRight="2sp"
+					android:layout_weight="0.3"
+					android:text="FROM"
+					android:textColor="#000000"
+					android:textSize="15sp"
+					android:textStyle="bold|italic"
+
+					/>
+
+				<EditText
+					android:id="@+id/etFromDate"
+					android:layout_width="0dp"
+					android:layout_height="40dp"
+					android:layout_weight="0.5"
+					android:clickable="false"
+					android:editable="false"
+					android:focusable="false"
+					android:hint="FromDate"
+					android:maxLines="1"
+					android:singleLine="true"
+					android:textColorHint="#848484"
+					android:textSize="13sp" />
+
+				<TextView
+					android:layout_width="0dp"
+					android:layout_height="40dp"
+					android:layout_marginLeft="2sp"
+					android:layout_marginRight="2sp"
+					android:layout_weight="0.2"
+					android:singleLine="true"
+					android:text="TO"
+					android:textColor="#000000"
+					android:textSize="15sp"
+					android:textStyle="bold|italic"
+
+					/>
+
+				<EditText
+					android:id="@+id/etToDate"
+					android:layout_width="0dp"
+					android:layout_height="40dp"
+					android:layout_weight="0.5"
+					android:clickable="false"
+					android:editable="false"
+					android:focusable="false"
+					android:hint="ToDate"
+					android:maxLines="1"
+					android:singleLine="true"
+					android:textColorHint="#848484"
+					android:textSize="13sp" />
+
+			</LinearLayout>
+		</LinearLayout>
+
+		<LinearLayout
+			android:id="@+id/ll4"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1.5"
+			android:gravity="center"
+			android:orientation="horizontal" >
+
+			<ImageButton
+				android:id="@+id/btnSearch"
+				android:layout_width="35dp"
+				android:layout_height="35dp"
+				android:layout_gravity="center"
+				android:background="@drawable/search"
+				android:padding="2dp"/>
+		</LinearLayout>
+	</LinearLayout>
+
+	<ListView
+		android:id="@+id/doctorlistview"
+		android:layout_width="fill_parent"
+		android:layout_height="match_parent"
+		android:layout_gravity="center"
+		android:layout_marginBottom="1dp"
+		android:layout_marginTop="1dp" />
+
+</LinearLayout>

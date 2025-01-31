@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff">
+
+    <LinearLayout
+        android:id="@+id/LL_ButtonsTab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonPopularTest_id"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#f5f5f5"
+            android:onClick="selectFrag"
+            android:padding="1sp"
+            android:text="Popular\nTest"
+            android:textColor="#000000"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/buttonUploadPrescription_id"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#f5f5f5"
+            android:onClick="selectFrag"
+            android:padding="1sp"
+            android:text="Upload Prescription"
+            android:textColor="#000000"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/buttonSelectTest_id"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#f5f5f5"
+            android:onClick="selectFrag"
+            android:padding="1sp"
+            android:text="Select\nTest"
+            android:textColor="#000000"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layojklut_Pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/LL_ButtonsTab"
+        android:textColorHint="#009688">
+
+        <EditText
+            android:id="@+id/etPnameText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/LL_ButtonsTab"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="0dp"
+            android:layout_weight="1"
+            android:editable="false"
+            android:focusable="false"
+            android:hint="Patient name :"
+            android:maxEms="4"
+            android:maxLines="1"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:textColorHint="#009688" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ScrollView_id"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/ll_btnother2"
+        android:layout_below="@+id/input_layojklut_Pass">
+
+        <LinearLayout
+            android:id="@+id/rl2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp">
+
+
+   <!-- *************************  LL_PopularTest ********************* -->
+
+            <LinearLayout
+                android:id="@+id/LL_PopularTest_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+
+                <LinearLayout
+                    android:id="@+id/ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/ll_pname">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_layout_Pasmnns"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:layout_weight="2">
+
+                        <EditText
+                            android:id="@+id/EntertestName_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint=" Enter Test names "
+                            android:textSize="12dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:textAppearance="@android:style/TextAppearance.Medium"
+                            android:maxEms="4"
+                            android:singleLine = "true"
+                            android:maxLines="1"
+
+                            />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/ORlabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:text="OR"
+                        android:textColor="#0054A6"
+                        android:textStyle="bold"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select Popular Test"
+                    android:textColor="#0054A6"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_below="@+id/textview"/>
+                <TableLayout
+                    android:id="@+id/TestNameTableHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/linear4">
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="8dp"
+                            android:text="Action"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="Test Name"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:gravity="center"
+                            android:text=""
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Price"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Discount"
+                            android:textStyle="bold" />
+                    </TableRow>
+                </TableLayout>
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/TestNameTableHeader"
+                    android:layout_above="@+id/ll_btnother"
+                    android:id="@+id/ScrollVienmw_id"
+                    android:layout_margin="10dp"
+                    android:layout_marginTop="0dp"
+
+                    >
+                    <TableLayout
+                        android:id="@+id/myTestTableEnterTest_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginRight="0dp"
+                        android:paddingLeft="0dp"
+                        android:layout_below="@+id/TestNameTableHeader">
+                    </TableLayout>
+
+                </ScrollView>
+
+
+
+            </LinearLayout>
+
+     <!-- *************************  LL_UploadPrescription ********************* -->
+
+            <LinearLayout
+                android:id="@+id/LL_UploadPrescription_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/linearlayout_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/UploadImge_ll"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingLeft="0dp"
+                    android:paddingRight="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginLeft="0dp"
+                   >
+
+                    <GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:columnCount="2"
+                        android:rowCount="2"
+                        android:background="#ffffff"
+                        android:layout_gravity="center"
+
+                        >
+
+                        <ImageView
+
+                            android:id="@+id/uploadpic"
+                            android:layout_width="140dp"
+                            android:layout_height="140dp"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/textviewstyle"
+                            android:gravity="center"
+                            android:padding="1dp"
+                            android:src="@drawable/addimage" />
+
+                        <ImageView
+                            android:id="@+id/uploadpicTwo"
+                            android:layout_width="140dp"
+                            android:layout_height="140dp"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/textviewstyle"
+                            android:gravity="center"
+                            android:padding="1dp"
+                            android:src="@drawable/addimage" />
+
+                        <ImageView
+                            android:id="@+id/uploadpicThree"
+                            android:layout_width="140dp"
+                            android:layout_height="140dp"
+                            android:gravity="center"
+                            android:src="@drawable/addimage"
+                            android:layout_margin="5dp"
+                            android:padding="1dp"
+                            android:background="@drawable/textviewstyle"/>
+
+                        <ImageView
+                            android:id="@+id/uploadpicFour"
+                            android:layout_width="140dp"
+                            android:layout_height="140dp"
+                            android:gravity="center"
+                            android:padding="1dp"
+                            android:src="@drawable/addimage"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/textviewstyle"/>
+
+                    </GridLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_horizontal"
+                        android:text="OR"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/ll2"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@+id/linearlayout1"
+                        android:orientation="horizontal"
+                        android:paddingLeft="0dp"
+                        android:paddingRight="0dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="20dp"
+                        >
+
+
+                        <Button
+                            android:id="@+id/CaptureButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.8"
+                            android:text="Capture Photo"
+                            android:textAllCaps="false"
+                            android:textColor="#009688"
+                            android:textStyle="bold"
+                            android:typeface="normal"
+                            android:background="@drawable/borderbutton"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+     <!-- *************************  LL_SelectTest ********************* -->
+
+            <LinearLayout
+                android:id="@+id/LL_SelectTest_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="0dp"
+
+
+                    >
+
+                    <LinearLayout
+                        android:id="@+id/linear1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+
+                        >
+
+                        <Spinner
+                            android:id="@+id/spinner_testSelect"
+                            style="@style/spinner_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+
+                            android:paddingLeft="10dp"
+                            android:textSize="12dp"
+                            android:paddingRight="10dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linear2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/linear1"
+                        android:layout_margin="15dp"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        >
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/input_layout_Pass"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="0dp">
+                            <AutoCompleteTextView
+                                android:id="@+id/etTestName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="1"
+                                android:textSize="15dp"
+                                android:completionThreshold="1"
+                                android:hint="Search...Test Name"
+                                android:imeActionLabel="Done"
+                                android:maxLines="1"
+
+                                android:singleLine="true"
+                                android:textColor="#000000"
+                                />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linear3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/linear2"
+                        android:layout_margin="15dp"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:visibility="gone" >
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/input_layout_TestProfil"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="0dp">
+                            <AutoCompleteTextView
+                                android:id="@+id/etProfileSearch"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="1"
+                                android:completionThreshold="1"
+                                android:hint="Search...Test Profile Name"
+                                android:imeActionLabel="Done"
+                                android:maxLines="1"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:singleLine="true"
+                                android:textSize="15sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linear4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/linear3"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:id="@+id/textView1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Select the Category"
+                            android:textSize="15dp"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textStyle="bold" />
+
+                        <Spinner
+                            android:id="@+id/spinner_category"
+                            style="@style/spinner_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_margin="15dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:textSize="12dp"
+                            android:paddingLeft="10dp" />
+
+                        <LinearLayout
+                            android:id="@+id/linear6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/input_layout_TestProfildf"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="0dp">
+                                <AutoCompleteTextView
+                                    android:id="@+id/etNameByCategorySearch"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_weight="1"
+                                    android:completionThreshold="1"
+                                    android:hint="Search...Test Name"
+                                    android:imeActionLabel="Done"
+                                    android:maxLines="1"
+                                    android:paddingLeft="10dp"
+                                    android:singleLine="true"
+                                    android:textColor="#000000"
+                                    android:textSize="15sp" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <TableLayout
+                        android:id="@+id/TestNameTableHeader2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/linear4">
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:paddingLeft="8dp"
+                                android:text="Action"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:text="Test or Profile Name"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0"
+                                android:gravity="center"
+                                android:text=""
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Price"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Discount"
+                                android:textStyle="bold" />
+                        </TableRow>
+                    </TableLayout>
+                    <TableLayout
+                        android:id="@+id/TestNameTable"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/TestNameTableHeader2"
+                        android:stretchColumns="1,2" >
+                    </TableLayout>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_btnother2"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginBottom="0dp">
+
+        <Button
+            android:id="@+id/RegisterPatiebtBtn_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="0.8"
+            android:background="#0054A6"
+            android:text="Register Patient"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:typeface="normal" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

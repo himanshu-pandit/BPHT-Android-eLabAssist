@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lint>
+    <issue id="InflateParams">
+        <ignore path="src/com/bluepearl/dnadiagnostics/BookAppointment.java" />
+        <ignore path="src/com/bluepearl/dnadiagnostics/PatientAdapter.java" />
+    </issue>
+    <issue id="NewApi">
+        <ignore path="src/com/bluepearl/dnadiagnostics/BaseActivity.java" />
+    </issue>
+    <issue id="RtlHardcoded">
+        <ignore path="src/com/bluepearl/dnadiagnostics/TestSelectionTab.java" />
+    </issue>
+    <issue id="SimpleDateFormat">
+        <ignore path="src/com/bluepearl/dnadiagnostics/PatientProfile.java" />
+    </issue>
+</lint>

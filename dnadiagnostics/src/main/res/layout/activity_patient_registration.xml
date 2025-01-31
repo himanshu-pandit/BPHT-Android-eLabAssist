@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+
+<RelativeLayout 
+    android:id="@+id/rl"
+     android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+    
+    <RelativeLayout 
+        android:id="@+id/rl1"
+     	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+   		android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+        
+        <LinearLayout android:id="@+id/ll_pname" 
+      		  		  android:layout_height="wrap_content" 
+      		  		  android:layout_width="match_parent" 
+      		  		  android:orientation="horizontal"
+      		  		  android:layout_marginTop="10dp">
+    
+    <EditText 
+        		android:layout_height="wrap_content" 
+    	  		android:layout_width="0dp" 
+    	  		android:layout_weight="1"
+    	  		android:id="@+id/etPatientName"
+    	  		android:paddingLeft="10dp"
+            	android:paddingRight="10dp"
+
+    	  		android:textColor="#000000"
+    	  		android:singleLine = "true"
+				android:maxLines="1" 
+				android:hint="Patient Name"
+				android:layout_marginTop="15dp"/>
+    
+    <ImageButton 
+	    android:id="@+id/clear"
+   		android:layout_height="wrap_content" 
+    	android:layout_width="wrap_content"
+    	android:layout_marginTop="20dp"
+    	android:background="@drawable/cross"/> 
+	
+    </LinearLayout>
+        
+        <EditText 
+    	  		android:layout_height="wrap_content" 
+    	  		android:layout_width="match_parent" 
+    	  		android:id="@+id/etPAge" 
+    	  		android:layout_below="@+id/ll_pname"
+    	  		android:hint="Age"
+    	 		android:inputType="number"
+        		android:paddingLeft="10dp"
+            	android:paddingRight="10dp"
+        		android:singleLine = "true"
+				android:maxLines="1"
+				android:maxLength="3" 
+				android:layout_marginTop="15dp"/>
+        
+        <TextView android:id="@+id/txtGender"
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:text="Gender :"
+        	android:layout_marginTop="15dp"
+        	android:textSize="18sp"
+        	android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+        	android:layout_below="@+id/etPAge"/>
+        
+        <RadioGroup android:id="@+id/radioGender"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:orientation="horizontal"
+        	android:layout_below="@+id/txtGender" 
+        	android:layout_marginTop="15dp"
+        	android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+        	
+    	    <RadioButton android:id="@+id/radioMale"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:text="Male"
+            	android:buttonTint="#000000"
+            	android:checked="true"/>
+    	    
+ 
+        	<RadioButton android:id="@+id/radioFemale"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:buttonTint="#000000"
+            	android:text="Female" />
+    	</RadioGroup>
+    	
+			</RelativeLayout>
+		
+</RelativeLayout>
+
+ <LinearLayout
+        android:id="@+id/LinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl"
+        android:layout_above="@+id/ll_btnother"
+        android:layout_gravity="bottom"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginTop="15dp" >
+         
+			<ListView
+        android:id="@+id/listviewFamilyMembers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:dividerHeight="0.2dp"
+        android:divider="#0000CC"/>
+			
+			</LinearLayout>
+
+
+<LinearLayout
+        android:id="@+id/ll_btnother"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <Button
+            android:id="@+id/BookButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="0.8"
+            android:background="#0054A6"
+            android:text="Book Appointment"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:typeface="normal" />
+
+        <Button
+            android:id="@+id/SelectButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="0.7"
+            android:background="#0054A6"
+            android:text="Select Test"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:typeface="normal" />
+    </LinearLayout>
+
+</RelativeLayout>

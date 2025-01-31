@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+ 
+    <EditText 
+        android:id="@+id/etSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittextstyle"
+        android:drawableLeft="@drawable/search"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:singleLine="true"
+        android:maxEms="4"
+        android:maxLines="1"
+        android:padding="10dp"
+        android:hint="Search Nearby Laboratories"/>
+    
+
+    
+    <ListView
+        android:id="@+id/listviewNearby"
+        android:layout_below="@+id/etSearch"
+        android:layout_above="@+id/btnCancel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:dividerHeight="0.1dp"
+        android:divider="#0000CC"
+    />
+    
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="right"
+        android:background="@drawable/cancel_btn_style"
+        android:textColor="#ffffff"
+        android:text="Cancel"
+        android:textSize="15sp"
+        android:layout_margin="10dp" >
+    </Button>
+    
+
+</RelativeLayout>

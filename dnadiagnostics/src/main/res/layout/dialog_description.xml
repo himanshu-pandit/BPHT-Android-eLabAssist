@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:minWidth="800dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/inputSearch"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:hint="Search Referring Doctors..."
+        android:inputType="text"
+        android:padding="10dp" />
+
+
+    <ListView
+        android:id="@+id/listViewDoctors"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:divider="#0054a6"
+        android:dividerHeight="0.6dp"
+        android:padding="12dp"></ListView>
+    
+</LinearLayout>

@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_registration_flebotomia"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+ >
+
+
+    <ScrollView
+        android:id="@+id/scrollview_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingBottom="20dp">
+
+        <LinearLayout
+            android:id="@+id/rl2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:orientation="vertical"
+            android:paddingRight="10dp" >
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+         <!--   <LinearLayout
+                android:id="@+id/ll_seperator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll"
+                android:orientation="horizontal" >
+
+                <ImageButton
+                    android:id="@+id/seperator"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/seprator" />
+            </LinearLayout>  -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Patient Details :"
+        android:textSize="20dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/border"
+        android:paddingLeft="20dp"
+        android:paddingRight="10dp">
+            <LinearLayout
+                android:id="@+id/ll_pnameF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_seperator"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+              >
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/id_patientName"
+                    android:text="Deepak Pandit"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_marginRight="5dp"
+                    android:textStyle="bold|italic"
+                    android:textColor="#000000"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_ageF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_pnameF"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/id_patientNameMobileNumber"
+
+                    android:text="8855814859"
+                    android:layout_weight="0.9"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textStyle="italic"
+                    android:textColor="#000000"
+                    />
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="25sp"
+                    android:id="@+id/imgCallbtnTwo"
+                    android:layout_weight="0.1"
+                    android:background="@drawable/phonee"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_mobilenumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_ageF"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/id_patientAddrs"
+                    android:text="Bluepear HelthTech pvt Ltd. Chandrawarsha Complex, above SBI,pashan, Pune"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textStyle="italic"
+                    android:layout_weight="0.9"
+                    android:textColor="#111111"
+                    android:textSize="15sp"
+                    />
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="25sp"
+                    android:id="@+id/imgMapLoction"
+                    android:layout_weight="0.1"
+                    android:layout_gravity="center"
+                    android:background="@drawable/marker_retailer"/>
+
+            </LinearLayout>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Collection Center :"
+        android:textSize="20dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_marginTop="10dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/border"
+        android:paddingLeft="20dp"
+        android:paddingRight="10dp"
+        android:layout_marginTop="5dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/id_collectionCentername"
+            android:text="Shree Swami Samarth Diagnostic Centre(Kothrud)"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_marginRight="5dp"
+            android:textStyle="italic"
+            android:textSize="15sp"
+            android:textColor="#111111"/>
+    </LinearLayout>
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Test Details :"
+        android:textSize="20dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_marginTop="10dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/border"
+        android:paddingLeft="20dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp">
+        <LinearLayout
+            android:id="@+id/ll_pnameFfdfghd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_seperator"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Test:"
+                android:layout_weight="0.3"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="italic"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/id_TestName"
+                android:text="complete blood count,\nBlood Sugar Fasting and Post Glucose"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_marginRight="5dp"
+                android:textStyle="italic"
+                android:layout_weight="0.9"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_agehdfdsdfvF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_pnameF"
+            android:layout_marginTop="2dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Total Amount :"
+                android:layout_weight="0.4"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="italic"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/id_TotalAmount"
+                android:text=" 500 Rs."
+                android:layout_weight="0.4"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold|italic"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_agehdfddfsdtfhdfvF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_pnameF"
+            android:layout_marginTop="2dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Amount Paid :"
+                android:layout_weight="0.4"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="italic"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/id_AmountPaid"
+                android:text=" 200 Rs."
+                android:layout_weight="0.4"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold|italic"
+                android:textColor="#6cb13c"
+                android:textSize="15sp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_atfhdfvF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_pnameF"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Pendding Amount :"
+                android:layout_weight="0.5"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="italic"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/id_penddingAmount"
+                android:text=" 300 Rs."
+                android:layout_weight="0.4"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold|italic"
+                android:textColor="#ff4d4d"
+                android:textSize="15sp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_mobilenumbjhkjher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_ageF"
+            android:layout_marginTop="2dp"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Test State :"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="italic"
+                android:layout_weight="0.4"
+                android:textColor="#111111"
+                android:textSize="15sp"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/id_Teststatfdafe"
+                android:text="Registration"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold|italic"
+                android:layout_weight="0.9"
+                android:textColor="#ff4d4d"
+                android:textSize="15sp"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/ll9l"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/border"
+        android:paddingLeft="20dp"
+        android:paddingRight="10dp"
+        android:layout_marginTop="5dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/ll_mobilenumbjhgrfsdgkjher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_ageF"
+            android:layout_marginTop="2dp"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Current State :"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold|italic"
+                android:layout_weight="0.4"
+                android:textColor="#111111"
+                android:textSize="15sp"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/id_TestCurrentState"
+                android:text="sample collected"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold|italic"
+                android:layout_weight="0.6"
+                android:textColor="#ff4d4d"
+                android:paddingLeft="5dp"
+                android:textSize="15sp"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_TestNextState"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_ageF"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Next State :"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_weight="0.4"
+                android:textColor="#111111"
+                android:textStyle="bold|italic"
+                android:textSize="15sp"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/id_TestNextState"
+                android:text="sample delivered"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold|italic"
+                android:layout_weight="0.6"
+                android:paddingLeft="5dp"
+                android:textColor="#ffffff"
+                android:background="@drawable/btnborder"
+
+                android:textSize="15sp"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/id_backBtn"
+        android:foregroundGravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/backbutton"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="20dp"/>
+
+</RelativeLayout>

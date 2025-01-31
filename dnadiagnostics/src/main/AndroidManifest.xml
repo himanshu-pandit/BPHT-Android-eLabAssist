@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.bluepearl.dnadiagnostics">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="false"
+        android:fullBackupOnly="false"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="HardcodedDebugMode">
+
+        <activity android:name=".MoreActivity" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+        <!--
+ Set custom default icon. This is used when no icon is set for incoming notification messages.
+     See README(https://goo.gl/l4GJaQ) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/logo" />
+        <!--
+ Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- <provider -->
+        <!-- android:name="androidx.core.content.FileProvider" -->
+        <!-- android:authorities="com.bluepearl.dnadiagnostics.fileprovider" -->
+        <!-- android:exported="false" -->
+        <!-- android:grantUriPermissions="true"> -->
+        <!-- <meta-data -->
+        <!-- android:name="android.support.FILE_PROVIDER_PATHS" -->
+        <!-- android:resource="@xml/provider_path" /> -->
+        <!-- </provider> -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.bluepearl.dnadiagnostics.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_path" />
+        </provider>
+
+        <receiver
+            android:name=".SmsReciver"
+            android:exported="true"
+            android:label="@string/app_name">
+            <intent-filter android:priority="1000">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".PatientList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BookAppointment"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ChangePassword"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ChangePasswordForDoctor"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ChangePasswordForLabUser"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ChangePasswordPhlebotomy"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PatientProfile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UserProfile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TestSelectionTab"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TestEnterTab"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UploadPrescriptionTab"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ForgetPassword"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SigninActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SignupActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MyAppointments"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Trackers"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DiabetesCare"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AddMeal"
+            android:label="Add Meal"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Transparent" />
+        <activity
+            android:name=".DateTimeSelection"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Manual_OTP"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PatientInformation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ViewReportDoctor"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ViewReportLabUser"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AddressSelection"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LabSelection"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LabSelectionForDoctor"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LabDetails"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RegisterPatient"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AlllTestNameForAdmin"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PhlebotomyTabOn"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RegisterPatientNewAdv"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RegisterPatientNew"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PatientDetailsShowOn"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AlllTestName"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PhlebotomyAreaListTabOn"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PhlebotomyMyListTabOn"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RegisterPatientPhlebotomy"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RegisterPatientPhlebotomyAdv"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SendMessage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RegisterPatientNewAdvAdmin"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Dashboard"
+            android:label="Dashboard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AdminProfile"
+            android:label="User Profile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ChangePasswordForAdmin"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SendMessageAdmin"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ViewReportAdmin"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RegisterPatientNewAdmin"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ViewReportAttachment"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".MassagListAdmin" />
+        <activity android:name=".MessageShowAdmin" />
+
+        <service
+            android:name=".FirebaseMessagingService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".FirebaseInstanceIDService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

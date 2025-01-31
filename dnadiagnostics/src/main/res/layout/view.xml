@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:minWidth="800dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <EditText android:id="@+id/inputSearch"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search Preferred Labs..."
+        android:inputType="text"
+        android:layout_marginTop="10dp"
+        android:completionThreshold="1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:imeActionLabel="Done"/>
+    
+    <ListView
+        android:id="@+id/listViewPreferredLabs"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" 
+        android:dividerHeight="0.2dp"
+        android:divider="#0000CC"
+        />
+
+</LinearLayout>

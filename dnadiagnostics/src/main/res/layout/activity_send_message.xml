@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!--   <LinearLayout
+           android:id="@+id/ll"
+           android:layout_width="match_parent"
+           android:layout_height="50dp"
+           android:background="#fff766">
+
+           <TextView
+               android:id="@+id/txtviewlab"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textSize="18dp"
+               android:layout_marginLeft="30dp"
+               android:layout_marginRight="30dp"
+               android:textColor="#E96D13"
+               android:text="eLAB Assist"
+               android:textStyle="bold"
+               android:layout_gravity="center"
+               />
+       </LinearLayout>
+
+       -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/ll1sendmessage_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/ll_pnameF"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_seperator"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    >
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Messages To :"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:layout_marginRight="3dp"
+                        android:textStyle="bold"
+                        android:singleLine="true"
+                        />
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        style="@style/spinner_style"
+                        android:id="@+id/msgTo_spinr_id"
+                        android:textStyle="bold"
+                        android:clickable="true"
+                        android:textColor="#ffffff"
+                        >
+                    </Spinner>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_Msg_listSpinnern"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_pnameF"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="30dp"
+                    >
+                    <LinearLayout
+                        android:id="@+id/ll_Msg_listSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ll_pnameF"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        >
+
+                        <Spinner
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            style="@style/spinner_style"
+                            android:id="@+id/msgLsit_spinr_id"
+                            android:textStyle="bold"
+                            android:clickable="true"
+                            android:textColor="#ffffff"
+                            android:visibility="gone"
+                            >
+                        </Spinner>
+
+                        <TextView
+                            android:id="@+id/CollectionCenterNameTv_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:textColor="#000000"
+                            android:textSize="20dp"
+                            android:padding="2dp"
+                            android:visibility="gone"
+                            android:layout_marginTop="10dp"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/ll_pname2"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:orientation="horizontal" >
+
+                        <AutoCompleteTextView
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"
+                            android:id="@+id/SearchCenter"
+                            android:textColorHint="#848484"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:layout_weight="3"
+                            android:completionThreshold="1"
+                            android:hint="Search Collection Center"
+
+                            >
+                            <requestFocus/>
+                        </AutoCompleteTextView>
+                        <ImageButton
+                            android:id="@+id/clear2_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:padding="2dp"
+                            android:background="@drawable/cross" />
+
+                    </LinearLayout>
+                </LinearLayout>
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/spinner_msg_id"
+                    style="@style/spinner_style"
+                    android:clickable="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Type Your Message Below :"
+                    android:layout_marginTop="5dp"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:hint="Enter Your Message Here"
+                    android:id="@+id/etSendMessage_id"
+                    android:paddingLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:paddingRight="10dp"/>
+
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="50dp"
+                    android:id="@+id/btnSend_id"
+                    android:text="Send"
+                    android:background="#4376bf"
+                    android:textColor="@color/btnTextcolor"
+                    android:textStyle="bold"
+                    android:typeface="normal"
+                    android:textAllCaps="true"
+                    android:paddingLeft="10dp"/>
+
+
+
+            </LinearLayout>
+
+            <!--
+                     <Button
+                         android:id="@+id/OkButton"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginBottom="10dp"
+                         android:layout_marginTop="10dp"
+                         android:text="OK"
+                         android:background="#fff766"
+                         android:textColor="#E96D13"
+                         android:textStyle="bold"
+                         android:typeface="normal"
+                         android:paddingLeft="10dp"
+                         android:paddingRight="10dp"/>
+
+                 </LinearLayout> -->
+
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

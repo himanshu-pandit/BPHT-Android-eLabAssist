@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#0054A6" >
+
+        <TextView
+            android:id="@+id/txtviewlab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:text="eLAB Assist"
+            android:textColor="#ffffff"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/ll1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/imgview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="5dp"
+                    android:contentDescription="Hello"
+                    android:src="@drawable/labservicespicture" >
+                </ImageView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll999"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll1"
+                android:orientation="vertical" >
+
+                <!--
+                <ImageView
+                    android:id="@+id/imgline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/seprator" >
+                </ImageView>
+                -->
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:descendantFocusability="beforeDescendants" >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/card_background_selector"
+                        android:descendantFocusability="afterDescendants"
+                        android:orientation="horizontal"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp" >
+
+                        <LinearLayout
+                            android:id="@+id/ll_lbltime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <ImageView
+                                android:id="@+id/imgclk"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="10dp"
+                                android:src="@drawable/phone" />
+
+                            <TextView
+                                android:id="@+id/text_id99"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="8dp"
+                                android:text="OPENING HOURS"
+                                android:textColor="#00FF00"
+                                android:textSize="15sp" >
+                            </TextView>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/ll_lbltime"
+                            android:orientation="horizontal" >
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="10dp"
+                                android:padding="10dp" />
+
+                            <TableLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" >
+
+                                <TableRow
+                                    android:id="@+id/tableRow1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                     android:layout_marginLeft="10dp">
+
+                                    <TextView
+                                        android:id="@+id/textView1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Mon "
+                                         />
+
+                                    <TextView
+                                        android:id="@+id/textView11"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="9:00 am - 8:30 pm" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:id="@+id/tableRow2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" 
+                                    android:layout_marginLeft="10dp">
+
+                                    <TextView
+                                        android:id="@+id/textView2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Tue " 
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/textView21"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="9:00 am - 8:30 pm" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:id="@+id/tableRow3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp" >
+
+                                    <TextView
+                                        android:id="@+id/textView3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Wed " 
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/textView31"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="9:00 am - 8:30 pm" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:id="@+id/tableRow4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" 
+                                    android:layout_marginLeft="10dp">
+
+                                    <TextView
+                                        android:id="@+id/textView4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Thu "/>
+
+                                    <TextView
+                                        android:id="@+id/textView41"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="9:00 am - 8:30 pm" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:id="@+id/tableRow5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp" >
+
+                                    <TextView
+                                        android:id="@+id/textView5"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Fri " />
+
+                                    <TextView
+                                        android:id="@+id/textView51"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="9:00 am - 8:30 pm" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:id="@+id/tableRow6"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp" >
+
+                                    <TextView
+                                        android:id="@+id/textView6"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Sat   " />
+
+                                    <TextView
+                                        android:id="@+id/textView61"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="9:00 am - 8:30 pm" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:id="@+id/tableRow7"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp" >
+
+                                    <TextView
+                                        android:id="@+id/textView7"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Sun   " />
+
+                                    <TextView
+                                        android:id="@+id/textView71"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Closed" />
+                                </TableRow>
+                            </TableLayout>
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/button99"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="SEE TIMINGS"
+                            android:visibility="gone" >
+                        </Button>
+
+                        <LinearLayout
+                            android:id="@+id/ll_line1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/ll_time"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal" >
+
+                            <ImageView
+                                android:id="@+id/imgline1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/seprator" >
+                            </ImageView>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_addr"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/ll_line1"
+                            android:orientation="horizontal" >
+
+                            <ImageView
+                                android:id="@+id/imgloc"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="10dp"
+                                android:src="@drawable/location" />
+
+                            <TextView
+                                android:id="@+id/text_id999999"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="8dp"
+                                android:text=""
+                                android:textSize="15sp" >
+                            </TextView>
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/locationtxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/ll_addr"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/strLocation"
+                            android:textColor="#0054A6" >
+                        </TextView>
+
+                        <LinearLayout
+                            android:id="@+id/ll_line2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/locationtxt"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal" >
+
+                            <ImageView
+                                android:id="@+id/imgline2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/seprator" >
+                            </ImageView>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_call"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/ll_line2"
+                            android:orientation="horizontal"
+                            android:paddingBottom="10dp" >
+
+                            <ImageView
+                                android:id="@+id/imgcall"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="10dp"
+                                android:src="@drawable/phone" />
+
+                            <TextView
+                                android:id="@+id/call"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="8dp"
+                                android:text="@string/strcall"
+                                android:textColor="#0054A6"
+                                android:textSize="15sp" >
+                            </TextView>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </FrameLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
